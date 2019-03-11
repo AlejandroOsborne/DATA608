@@ -1,0 +1,12 @@
+name: Project3
+title: Project3
+username:
+account: alejandroosborne
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 779696
+bundleId: 1929324
+url: https://alejandroosborne.shinyapps.io/Project3/
+when: 1552260569.96599
+asMultiple: FALSE
+asStatic: FALSE

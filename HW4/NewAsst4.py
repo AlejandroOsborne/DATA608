@@ -8,7 +8,7 @@ import plotly.graph_objs as go
 csv_url = 'https://data.cityofnewyork.us/resource/uvpi-gqnh.json'
 trees = pd.read_json(csv_url)
 print("Reading csv file ...")
-print("done.")
+print("Reading complete.")
 tree=trees[['tree_id', 'spc_common', 'health' ,'steward']]
 tree.dropna(inplace=True)
 

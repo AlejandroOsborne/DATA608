@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Data 608
+    Alejandro Osborne
+    04/21/2019
+-->
+
+<head>
+<title>Module 6</title>
+</head>
+
+<body>
+<script type="text/javascript">
+function reverse_string() {
+    
+    var str_fld = document.getElementById("word").value;
+    var str_array = str_fld.split("");
+    var rev_array = str_array.reverse();
+    var rev_str = rev_array.join("");
+    var result = "<tr><td>Reversed word: </td><td>" + rev_str + "</td></tr>";
+    document.getElementById("rev_word").innerHTML = result;
+}
+function num_multiples() {
+    var num_fld = document.getElementById("num").value;
+    var result = "";
+    for(i = 1; i < 21; i++) {
+	if (i == 1) {
+	    result = ("<tr>");
+	}
+	if ((i == 5) || (i == 9) || (i == 13) || (i == 17)) {
+	    result += "</tr><tr>";
+	}
+	result += "<td>&nbsp;&nbsp;";
+	var num = num_fld * i;
+	result += num;
+	result += "&nbsp;&nbsp;</td>";
+    }
+    result += "</tr>";
+    var title = "Table: ";
+    document.getElementById("num_table").innerHTML = title + "<br />" + result;
+}
+</script>
+
+<h3> Alejandro's Word Reverser and Number Timeser </h3>
+<br />
+<br />
+
+<h4> Part 1 </h4>
+<h5> Reverse a word </h5>
+
+<form>
+<div>
+
+<div>
+<table>
+<tr>
+<td>Word Flipped: </td>
+<td><input id="word" type="text"/></td>
+<td><input id="reverse" type="button" value="reverse" onclick="reverse_string()"/></td>
+</tr>
+</table>
+</div>
+
+<br />
+<br />
+<div id="rev_word">
+</div>
+
+<br />
+<br />
+<br />
+<br />
+
+<h5>Multiples!!!</h5>
+<div>
+<table>
+<tr>
+<td>Get First 20 Multiples: </td>
+<td><input id="num" type="number"/></td>
+<td><input id="number" type="button" value="multiples" onclick="num_multiples()"/></td>
+</tr>
+</table>
+</div>
+
+<br />
+<br />
+<div>
+<table id="num_table">
+</table>
+</div>
+
+</div>
+</form>
+</body>
+
+</html>
